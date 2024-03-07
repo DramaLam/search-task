@@ -2,27 +2,25 @@ import React, { useState } from "react";
 // import { FiterUsers } from "../FilterUsers/FilterUsers";
 import "./styles.css";
 import { SearchContext } from "../SearchResults/SearchContext";
-import { UserCard } from "../UserCard/UserCard";
 import { useContext } from "react";
 import useInput from "../../hooks/useInput";
 
 
-export function SearchForm() {
-  
+export function SearchForm({ onChange }) {
   // const input = useInput()
+  // const [value, setValue] = useState('')
+  // const { users } = useContext(SearchContext);
+  // const [searchResults, setSearchResults] = React.useState([]);
+  const handleChange = (event) => {
+    onChange(event.target.value)
+  }
 
-  const [value, setValue] = useState('')
-
-  const { users } = useContext(SearchContext);
-  
-  const [searchResults, setSearchResults] = React.useState([]);
-
-  React.useEffect(() => {
-    const results = users.filter(user =>
-      user.firstName.toLowerCase().includes(value.toLowerCase())
-    );
-    setSearchResults(results);
-  }, [value]);
+  // React.useEffect(() => {
+  //   const results = users.filter(user =>
+  //     user.firstName.toLowerCase().includes(value.toLowerCase())
+  //   );
+  //   setSearchResults(results);
+  // }, [value]);
 
   return (
     <div className="searchForm">
@@ -31,7 +29,7 @@ export function SearchForm() {
           type="text"
           placeholder="Terry"
           // value="Terry"
-          onChange={(event) => setValue(event.target.value)}
+          onChange={handleChange}
           />
       </form>
     </div>

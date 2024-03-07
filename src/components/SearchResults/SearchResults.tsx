@@ -7,16 +7,17 @@ import useInput from "../../hooks/useInput";
 
 import "./style.css";
 
-export function SearchResults( ) {
+export function SearchResults( { name } ) {
   
   const { users } = useContext(SearchContext);
     
   const [value, setValue] = useState('')
 
-  const input = useInput()
+  // const input = useInput()
 
   const [searchResults, setSearchResults] = React.useState([]);
 
+  console.log(name);
 
   React.useEffect(() => {
     const results = users.filter(user =>

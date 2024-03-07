@@ -8,11 +8,16 @@ import { mockUsers } from "./mockUsers";
 
 export default function App() {
   const [users] = useState(mockUsers);
+  const [ name, setName ] = useState('')
+
+  const handleChange = (name) => {
+    setName(name)
+  }
 
   return (
     <SearchContext.Provider value={{ users }}>
-      <SearchForm />
-      <SearchResults />
+      <SearchForm onChange={handleChange}/>
+      <SearchResults name={name}/>
       {/* <FilterUsers value={<SearchForm />} /> */}
     </SearchContext.Provider>
   );
