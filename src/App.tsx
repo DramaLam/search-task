@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <SearchContext.Provider value={{ users }}>
-      {/* <SearchForm /> */}
+      <SearchForm />
       <SearchResults />
       {/* <FilterUsers value={<SearchForm />} /> */}
     </SearchContext.Provider>
