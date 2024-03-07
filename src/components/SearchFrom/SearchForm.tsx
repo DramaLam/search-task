@@ -4,19 +4,17 @@ import "./styles.css";
 import { SearchContext } from "../SearchResults/SearchContext";
 import { UserCard } from "../UserCard/UserCard";
 import { useContext } from "react";
-import { useInput } from "../../hook/useInput";
-
-
+import useInput from "../../hooks/useInput";
 
 
 export function SearchForm() {
   
-  useInput()
+  // const input = useInput()
 
   const [value, setValue] = useState('')
 
   const { users } = useContext(SearchContext);
-
+  
   const [searchResults, setSearchResults] = React.useState([]);
 
   React.useEffect(() => {
@@ -25,13 +23,6 @@ export function SearchForm() {
     );
     setSearchResults(results);
   }, [value]);
-
-  // const filteredValue = users.filter(user => {
-  //   return user.name.toLowerCase().includes(value.toLowerCase())
-  // })
-
-
-
 
   return (
     <div className="searchForm">

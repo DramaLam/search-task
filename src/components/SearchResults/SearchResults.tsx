@@ -3,17 +3,20 @@ import { SearchContext } from "./SearchContext";
 import { UserCard } from "../UserCard/UserCard";
 import { SearchForm } from "../SearchFrom/SearchForm";
 import React, { useState } from "react";
+import useInput from "../../hooks/useInput";
 
 import "./style.css";
 
-export function SearchResults() {
+export function SearchResults( ) {
+  
   const { users } = useContext(SearchContext);
     
   const [value, setValue] = useState('')
 
-  
+  const input = useInput()
 
   const [searchResults, setSearchResults] = React.useState([]);
+
 
   React.useEffect(() => {
     const results = users.filter(user =>
@@ -35,11 +38,11 @@ export function SearchResults() {
         </form>
       </div> */}
     
-    <div className="usersList">
-      {searchResults.map((user) => (
-        <UserCard {...user} />
-      ))}
-    </div>
+      <div className="usersList">
+        {searchResults.map((user) => (
+          <UserCard {...user} />
+        ))}
+      </div>
     </div>
   );
 }
