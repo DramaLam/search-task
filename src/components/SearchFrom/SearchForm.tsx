@@ -10,7 +10,7 @@ export function SearchForm({ onChange }) {
       <form>
         <input 
           type="text"
-          placeholder="Terry"
+          placeholder="Enter a search term"
           // value="Terry"
           onChange={handleChange}
           />

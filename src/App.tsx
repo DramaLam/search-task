@@ -6,15 +6,15 @@ import { mockUsers } from "./mockUsers";
 import TabsSection from "./components/TabsSection";
 
 export default function App() {
-  // Для работы поиска по имеющемуся списку
   const [users] = useState(mockUsers);
+
+  // for work SearchForm + SearchResults
   const [ name, setName ] = useState('')
   const handleChange = (name) => {
     setName(name)
   }
 
-  // Для переключения между секциями
-  const [visible, setVisible] = useState(true)
+  // for TabsSection
   const [tab, setTab] = useState('main')
 
   return (
@@ -31,7 +31,11 @@ export default function App() {
         </>
       )}
 
-      {tab === 'resource' && <SearchForm onChange={handleChange}/>}
+      {tab === 'resource' && (
+        <>
+            <SearchForm onChange={handleChange}/>
+        </>
+      )}
     </>
   );
 }

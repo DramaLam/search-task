@@ -7,8 +7,8 @@ export default function TabsSection({ active, onChange }) {
         Главная
       </Button>
       <Button
-        isActive={active === 'feedback'}
-        onClick={() => onChange('feedback')}
+        isActive={active === 'resource'}
+        onClick={() => onChange('resource')}
       >
         Список из стороннего ресурса
       </Button>
