@@ -11,6 +11,8 @@ export function SearchResults() {
     
   const [value, setValue] = useState('')
 
+  
+
   const [searchResults, setSearchResults] = React.useState([]);
 
   React.useEffect(() => {
@@ -22,7 +24,7 @@ export function SearchResults() {
 
   return (
     <div>
-        <div className="searchForm">
+      {/* <div className="searchForm">
         <form>
           <input 
             type="text"
@@ -31,7 +33,7 @@ export function SearchResults() {
             onChange={(event) => setValue(event.target.value)}
             />
         </form>
-      </div>
+      </div> */}
     
     <div className="usersList">
       {searchResults.map((user) => (

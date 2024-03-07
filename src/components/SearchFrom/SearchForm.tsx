@@ -4,11 +4,15 @@ import "./styles.css";
 import { SearchContext } from "../SearchResults/SearchContext";
 import { UserCard } from "../UserCard/UserCard";
 import { useContext } from "react";
+import { useInput } from "../../hook/useInput";
+
 
 
 
 export function SearchForm() {
   
+  useInput()
+
   const [value, setValue] = useState('')
 
   const { users } = useContext(SearchContext);
@@ -25,6 +29,9 @@ export function SearchForm() {
   // const filteredValue = users.filter(user => {
   //   return user.name.toLowerCase().includes(value.toLowerCase())
   // })
+
+
+
 
   return (
     <div className="searchForm">
