@@ -9,8 +9,6 @@ export function SearchResults( { name } ) {
   const { users } = useContext(SearchContext);
   const [searchResults, setSearchResults] = React.useState([]);
 
-  console.log(name);
-
   React.useEffect(() => {
     const results = users.filter(user =>
       user.firstName.toLowerCase().includes(name.toLowerCase())
