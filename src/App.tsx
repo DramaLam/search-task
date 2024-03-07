@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SearchForm } from "./components/SearchFrom/SearchForm";
 import { SearchContext } from "./components/SearchResults/SearchContext";
 import { SearchResults } from "./components/SearchResults/SearchResults";
-import { SearchResourse } from "./components/SearchResourse";
+import SearchResourse from "./components/SearchResourse"
 import { mockUsers } from "./mockUsers";
 import TabsSection from "./components/TabsSection";
 
