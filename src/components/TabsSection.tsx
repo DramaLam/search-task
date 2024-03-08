@@ -4,21 +4,21 @@ export default function TabsSection({ active, onChange }) {
   return (
     <section style={{ marginBottom: '1rem' }}>
       <Button isActive={active === 'main'} onClick={() => onChange('main')}>
-        Главная
+        Рабочая поисковая строка
       </Button>
 
       <Button
         isActive={active === 'resource'}
         onClick={() => onChange('resource')}
       >
-        Список из стороннего ресурса
+        Поиск по пользователям
       </Button>
 
       <Button
         isActive={active === 'resources'}
         onClick={() => onChange('resources')}
       >
-        Поиск по ссылке
+        Поиск по запросу
       </Button>
     </section>
   )
