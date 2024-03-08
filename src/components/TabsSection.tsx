@@ -6,11 +6,19 @@ export default function TabsSection({ active, onChange }) {
       <Button isActive={active === 'main'} onClick={() => onChange('main')}>
         Главная
       </Button>
+
       <Button
         isActive={active === 'resource'}
         onClick={() => onChange('resource')}
       >
         Список из стороннего ресурса
+      </Button>
+
+      <Button
+        isActive={active === 'resources'}
+        onClick={() => onChange('resources')}
+      >
+        Поиск по ссылке
       </Button>
     </section>
   )
