@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { SearchContext } from "./SearchContext";
 import { UserCard } from "../UserCard/UserCard";
 import React, { useState } from "react";
-
 import "./style.css";
 
 export function SearchResults( { name } ) {
