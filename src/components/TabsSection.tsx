@@ -2,9 +2,9 @@ import Button from './Button/Button'
 
 export default function TabsSection({ active, onChange }) {
   return (
-    <section style={{ marginBottom: '1rem' }}>
+    <section style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center'}}>
       <Button isActive={active === 'main'} onClick={() => onChange('main')}>
-        Рабочая поисковая строка
+        Поиск по mock данным
       </Button>
 
       <Button

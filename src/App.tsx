@@ -34,14 +34,12 @@ export default function App() {
 
       {tab === 'resource' && (
         <>
-            {/* <SearchForm onChange={handleChange}/> */}
             <SearchResourse name={name}/>
         </>
       )}
 
       {tab === 'resources' && (
         <>
-            {/* <SearchForm onChange={handleChange}/> */}
             <SearchRequest name={name}/>
         </>
       )}
