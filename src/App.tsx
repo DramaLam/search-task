@@ -21,13 +21,12 @@ export default function App() {
 
   return (
     <>
-
+      <SearchForm onChange={handleChange}/>
       <TabsSection active={tab} onChange={(current) => setTab(current)} />
 
       {tab === 'main' && (
         <>
           <SearchContext.Provider value={{ users }}>
-            <SearchForm onChange={handleChange}/>
             <SearchResults name={name}/>
           </SearchContext.Provider>
         </>
@@ -35,14 +34,14 @@ export default function App() {
 
       {tab === 'resource' && (
         <>
-            <SearchForm onChange={handleChange}/>
+            {/* <SearchForm onChange={handleChange}/> */}
             <SearchResourse name={name}/>
         </>
       )}
 
       {tab === 'resources' && (
         <>
-            <SearchForm onChange={handleChange}/>
+            {/* <SearchForm onChange={handleChange}/> */}
             <SearchRequest name={name}/>
         </>
       )}
