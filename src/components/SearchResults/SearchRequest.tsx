@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react"
 import { UserCard } from "../UserCard/UserCard"
 import "./style.css"
 
-export function Aaa( { name } ) {
+export function SearchRequest( { name } ) {
     const [usersList, setUsersList ] = React.useState([])
 
     async function fetchUsers() {
-        const response = await fetch('https://dummyjson.com/users/search?q=' + name)
+        const response = await fetch(`https://dummyjson.com/users/search?q=${name}`)
         const usersList = await response.json()
         setUsersList(usersList.users)
         console.log(name)

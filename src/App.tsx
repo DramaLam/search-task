@@ -5,7 +5,7 @@ import { SearchResults } from "./components/SearchResults/SearchResults";
 import { SearchResourse } from "./components/SearchResults/SearchResourse"
 import { mockUsers } from "./mockUsers";
 import TabsSection from "./components/TabsSection";
-import { Aaa } from "./components/SearchResults/Aaa";
+import { SearchRequest } from "./components/SearchResults/SearchRequest";
 
 export default function App() {
   const [users] = useState(mockUsers);
@@ -43,7 +43,7 @@ export default function App() {
       {tab === 'resources' && (
         <>
             <SearchForm onChange={handleChange}/>
-            <Aaa name={name}/>
+            <SearchRequest name={name}/>
         </>
       )}
     </>
