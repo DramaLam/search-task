@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ErrorBoundary } from "react-error-boundary"
 import { SearchForm } from "./components/SearchFrom/SearchForm";
 import { SearchContext } from "./components/SearchResults/SearchContext";
 import { SearchResults } from "./components/SearchResults/SearchResults";
@@ -25,23 +26,23 @@ export default function App() {
       <TabsSection active={tab} onChange={(current) => setTab(current)} />
 
       {tab === 'main' && (
-        <>
+        <ErrorBoundary fallback={<div>Ops... Something went wrong! Try again later</div>}>
           <SearchContext.Provider value={{ users }}>
             <SearchResults name={name}/>
           </SearchContext.Provider>
-        </>
+        </ErrorBoundary>
       )}
 
       {tab === 'resource' && (
-        <>
-            <SearchResourse name={name}/>
-        </>
+        <ErrorBoundary fallback={<div>Ops... Something went wrong! Try again later</div>}>
+          <SearchResourse name={name}/>
+        </ErrorBoundary>
       )}
 
       {tab === 'resources' && (
-        <>
-            <SearchRequest name={name}/>
-        </>
+        <ErrorBoundary fallback={<div>Ops... Something went wrong! Try again later</div>}>
+          <SearchRequest name={name}/>
+        </ErrorBoundary>
       )}
     </>
   );
