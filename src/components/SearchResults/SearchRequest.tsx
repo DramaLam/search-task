@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { UserCard } from "../UserCard/UserCard"
 import "./style.css"
 
+// Search for users from a third-party resource on request. Displaying data
 export function SearchRequest( { name } : {name : string} ) {
     const [usersList, setUsersList ] = useState([])
 

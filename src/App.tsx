@@ -11,13 +11,13 @@ import { SearchRequest } from "./components/SearchResults/SearchRequest";
 export default function App() {
   const [users] = useState(mockUsers);
 
-  // for work SearchForm + SearchResults
+  // transmitting data from the search form
   const [ name, setName ] = useState('')
   const handleChange = (name : string) => {
     setName(name)
   }
 
-  // for TabsSection
+  // switching between tabs
   const [tab, setTab] = useState('resources')
 
   return (
