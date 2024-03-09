@@ -13,7 +13,7 @@ export default function App() {
 
   // for work SearchForm + SearchResults
   const [ name, setName ] = useState('')
-  const handleChange = (name) => {
+  const handleChange = (name : string) => {
     setName(name)
   }
 

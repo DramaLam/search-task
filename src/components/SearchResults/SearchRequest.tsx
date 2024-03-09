@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { UserCard } from "../UserCard/UserCard"
 import "./style.css"
 
-export function SearchRequest( { name } ) {
+export function SearchRequest( { name } : {name : string} ) {
     const [usersList, setUsersList ] = useState([])
 
     async function fetchUsers() {

@@ -1,6 +1,6 @@
 import "./styles.css";
 
-export function SearchForm({ onChange }) {
+export function SearchForm({ onChange } : {onChange: (name: string) => void}) {
   const handleChange = (event) => {
     onChange(event.target.value)
   }

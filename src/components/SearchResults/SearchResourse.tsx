@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { UserCard } from "../UserCard/UserCard"
 import "./style.css"
 
-export function SearchResourse( { name } ) {
+export function SearchResourse( { name } : {name : string} ) {
     const [usersList, setUsersList ] = React.useState([])
 
     async function fetchUsers() {

@@ -1,6 +1,6 @@
 import classes from './Button.module.css'
 
-export default function Button({ children, isActive, ...props }) {
+export default function Button({ children, isActive, ...props } : {children: string; isActive: boolean; onClick: () => any;}) {
   return (
     <button
       {...props}

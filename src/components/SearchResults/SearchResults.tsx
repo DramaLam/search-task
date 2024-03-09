@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { SearchContext } from "./SearchContext";
 import { UserCard } from "../UserCard/UserCard";
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 
-export function SearchResults( { name } ) {
+export function SearchResults( { name } : {name : string} ) {
   const { users } = useContext(SearchContext);
   const [searchResults, setSearchResults] = React.useState([]);
 
@@ -18,8 +18,8 @@ export function SearchResults( { name } ) {
   return (
     <div>
       <div className="usersList">
-        {searchResults.map((user) => (
-          <UserCard {...user} />
+        {searchResults.map((user, id) => (
+          <UserCard key={id} {...user} />
         ))}
       </div>
     </div>
