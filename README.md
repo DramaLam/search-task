@@ -8,6 +8,10 @@
 npm install
 ```
 
+```bash
+npm i react-error-boundary
+```
+
 2. Для запуска в режиме разработки выполнить
 
 ```bash
