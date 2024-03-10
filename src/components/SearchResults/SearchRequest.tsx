@@ -7,9 +7,16 @@ export function SearchRequest( { name } : {name : string} ) {
     const [usersList, setUsersList ] = useState([])
 
     async function fetchUsers() {
-        const response = await fetch(`https://dummyjson.com/users/search?q=${name}`)
-        const usersList = await response.json()
-        setUsersList(usersList.users)
+        try {
+            const response = await fetch(`https://dummyjson.com/users/search?q=${name}`)
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const usersList = await response.json()
+            setUsersList(usersList.users)
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     }
 
     useEffect(() => {
